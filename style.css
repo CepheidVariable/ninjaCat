@@ -3,3 +3,74 @@
     margin: 0%;
     box-sizing: border-box;
 }
+body{
+    background: url(./assets/background2.jpg) repeat fixed;
+    background-size:inherit;
+}
+#wrap{
+    width: 512px;
+    height: 768px;
+    margin: 10em auto;
+    background: url(./assets/shinto_crop.jpg) no-repeat -60px;
+    background-size: cover;
+    border: 20px double rgb(230, 180, 19);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+#grid{
+    padding-top: 100px;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: repeat(5, auto);
+    justify-content: center;
+    align-content: center;
+    gap: 0.25em;
+}
+#grid img{
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+}
+.box{
+    width: 181px;
+    height: 50px;
+}
+.flip-box {
+    background-color: transparent;
+    width: 181px;
+    height: 50px;
+    perspective: 1000px;
+}
+
+.flip-box-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.flip{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+    transform: rotateY(180deg);
+}
+
+.flip-box-front, .flip-box-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+
+.flip-box-back {
+    width:181px;
+    height:50px;
+    transform: rotateY(180deg);
+}
