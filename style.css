@@ -10,7 +10,7 @@ body{
 #wrap{
     width: 512px;
     height: 768px;
-    margin: 10em auto;
+    margin: 5em auto;
     background: url(./assets/shinto_crop.jpg) no-repeat -60px;
     background-size: cover;
     border: 20px double rgb(230, 180, 19);
